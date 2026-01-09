@@ -1,10 +1,11 @@
 
 
-<span class="  mb-4 font-weight-bold">
+<span class=" user mb-4 font-weight-bold">
   {{ isInEditMode ? "Update User" : "Add User" }}
 </span>
 
-
+<div class="card  mt-2">
+  <div class="card-body">
 <form  #todoForm="ngForm"  (ngSubmit)="onTodoAdd()">
     <div class="form-group">
         <label for="todoItem">TodoItem*</label>
@@ -17,4 +18,8 @@
     <button *ngIf="!isInEditMode" mat-raised-button color="primary" type="submit" class="w-100" [disabled]="todoForm.invalid">Add Todo</button>
     <button *ngIf="isInEditMode" mat-raised-button color="primary" (click)="OnUpdate()" type="button" class="w-100" [disabled]="todoForm.invalid">Update Todo</button>
 </form>
+  </div>
+
+
+</div>
 
